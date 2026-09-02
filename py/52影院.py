@@ -445,7 +445,7 @@ class Spider(Spider):
 
         url = self.site_url + path
         if page > 1:
-            url += 'index_{0}.html'.format(page)
+            url += 'page/{0}.html'.format(page)
 
         html = self._fetch(url)
         videos = self._parse_list(html)
